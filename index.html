@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irya Foundation | One Rupee One Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            earth: { 900: '#3E2723', 800: '#4E342E', 700: '#5D4037', 600: '#6D4C41' },
+            gold: { DEFAULT: '#F9A825', dark: '#B8860B', 600: '#FFB300' },
+            cream: '#FFF8E1',
+            accent: { red: '#C62828', green: '#2E7D32' }
+          },
+          fontFamily: { script: ['Dancing Script', 'cursive'], sans: ['Inter', 'sans-serif'] }
+        },
+      },
+    }
+  </script>
+  <style>
+    .font-script { font-family: 'Dancing Script', cursive; }
+  </style>
+</head>
+<body class="bg-cream dark:bg-earth-900 text-earth-900 dark:text-cream font-sans antialiased">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-cream/90 dark:bg-earth-900/90 backdrop-blur border-b border-earth-700/20 dark:border-earth-700">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-4">
+    <a href="#home" class="font-semibold text-lg text-earth-800 dark:text-cream">Irya Foundation</a>
+
+    <div class="hidden md:flex gap-6 items-center">
+      <a href="#about" class="hover:text-gold-dark dark:hover:text-gold transition">About</a>
+      <a href="#impact" class="hover:text-gold-dark dark:hover:text-gold transition">Impact</a>
+      <a href="#donate" class="hover:text-gold-dark dark:hover:text-gold transition">Donate</a>
+      <a href="#volunteer" class="hover:text-gold-dark dark:hover:text-gold transition">Volunteer</a>
+      <a href="#contact" class="hover:text-gold-dark dark:hover:text-gold transition">Contact</a>
+      <button id="themeToggle" class="p-2 rounded-lg hover:bg-earth-700/20 transition min-h-[44px] min-w-[44px]" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+
+    <div class="flex items-center gap-2 md:hidden">
+      <button id="themeToggleMobile" class="p-2 rounded-lg hover:bg-earth-700/20 min-h-[44px] min-w-[44px]" aria-label="Toggle theme">
+        <span id="themeIconMobile">🌙</span>
+      </button>
+      <button id="hamburger" class="p-2 rounded-lg hover:bg-earth-700/20 min-h-[44px] min-w-[44px] md:hidden" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t border-earth-700/20 dark:border-earth-700 px-4 py-4 bg-cream dark:bg-earth-900">
+    <div class="flex flex-col gap-3">
+      <a href="#about" class="mobile-link py-2">About</a>
+      <a href="#impact" class="mobile-link py-2">Impact</a>
+      <a href="#donate" class="mobile-link py-2">Donate</a>
+      <a href="#volunteer" class="mobile-link py-2">Volunteer</a>
+      <a href="#contact" class="mobile-link py-2">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="pt-28 md:pt-32 pb-16 md:pb-24 bg-earth-700 dark:bg-earth-800">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="font-script text-4xl md:text-5xl lg:text-6xl text-gold mb-2">One Rupee. One Day. One Life.</h1>
+        <p class="text-cream/90 text-sm mb-2">Irya Foundation's</p>
+        <p class="text-xl md:text-2xl font-bold text-cream mb-4 bg-gold/30 inline-block px-3 py-1 rounded">ONE RUPEE ONE LIFE INITIATIVE</p>
+        <p class="text-lg text-cream/90 mb-4">₹1 a day can save a life.</p>
+        <p class="text-cream/80">Your small contribution can be someone's lifeline.</p>
+        <a href="#donate" class="inline-block mt-6 bg-gold text-earth-900 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition min-h-[44px] flex items-center">
+          Donate Today
+        </a>
+      </div>
+      <div class="order-first md:order-last">
+        <img src="assets/hero-hand-coin.png" alt="Hand giving one rupee coin" class="w-full max-w-lg mx-auto rounded-xl shadow-xl object-contain">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-16 md:py-24 bg-earth-600/20 dark:bg-earth-800/50">
+  <div class="max-w-4xl mx-auto px-4 md:px-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 text-gold-dark dark:text-gold">Serving Humanity with Purpose</h2>
+    <div class="w-16 h-1 bg-gold-dark dark:bg-gold mx-auto mb-8 rounded-full"></div>
+    <p class="text-center mb-8 text-earth-800 dark:text-cream/90">Irya Foundation is a mission-driven philanthropic organization committed to improving lives through healthcare support, community welfare, and social development initiatives.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-cream/60 dark:bg-earth-900/40 rounded-xl p-6 border border-earth-700/20 dark:border-earth-600">
+        <h3 class="font-semibold text-lg mb-3 text-gold-dark dark:text-gold">Our Mission</h3>
+        <p class="text-earth-800 dark:text-cream/90">To uplift communities by providing healthcare assistance, spreading awareness, and supporting social welfare initiatives that promote well-being, hope, and sustainable change.</p>
+      </div>
+      <div class="bg-cream/60 dark:bg-earth-900/40 rounded-xl p-6 border border-earth-700/20 dark:border-earth-600">
+        <h3 class="font-semibold text-lg mb-3 text-gold-dark dark:text-gold">Our Vision</h3>
+        <p class="text-earth-800 dark:text-cream/90">A healthier, stronger, and more inclusive society where every individual has access to essential support, care, and opportunities for a better future.</p>
+      </div>
+    </div>
+    <p class="text-xs text-earth-700/80 dark:text-cream/60 mt-8 text-center">PAN AAICI6143D | 12A NO AAICI6143DE20251 | 80G NO AAICI6143DF20261 | Reg. 06/01/2026</p>
+  </div>
+</section>
+
+<!-- ================= IMPACT ================= -->
+<section id="impact" class="py-16 md:py-24 bg-cream dark:bg-earth-900">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-earth-800 dark:text-cream">What We Do</h2>
+    <p class="text-center mb-12 text-earth-700 dark:text-cream/80">Key focus areas at Irya Foundation</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border border-earth-700/30 dark:border-earth-600 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="w-14 h-14 mx-auto mb-4 text-accent-red">
+          <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3 class="font-semibold mb-2">Healthcare Support</h3>
+        <p class="text-sm text-earth-700 dark:text-cream/80">Medical treatment, cancer care & awareness, health support for patients in need</p>
+      </div>
+      <div class="border border-earth-700/30 dark:border-earth-600 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="w-14 h-14 mx-auto mb-4 text-gold-dark dark:text-gold">
+          <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h3 class="font-semibold mb-2">Food & Care</h3>
+        <p class="text-sm text-earth-700 dark:text-cream/80">Food distribution, nutrition support, and care for vulnerable families</p>
+      </div>
+      <div class="border border-earth-700/30 dark:border-earth-600 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="w-14 h-14 mx-auto mb-4 text-accent-green">
+          <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="font-semibold mb-2">Education & Empowerment</h3>
+        <p class="text-sm text-earth-700 dark:text-cream/80">Education for underprivileged, health & hygiene awareness</p>
+      </div>
+      <div class="border border-earth-700/30 dark:border-earth-600 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="w-14 h-14 mx-auto mb-4 text-accent-red">
+          <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3 class="font-semibold mb-2">Blood Donation</h3>
+        <p class="text-sm text-earth-700 dark:text-cream/80">Blood donation camps, save lives, help patients in urgent need</p>
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="assets/medical-story.png" alt="Medical support" class="w-full min-h-[160px] object-contain rounded-lg bg-earth-700/10 dark:bg-earth-800/30">
+      <img src="assets/volunteer-children.png" alt="Volunteer with children" class="w-full min-h-[160px] object-contain rounded-lg bg-earth-700/10 dark:bg-earth-800/30">
+      <img src="assets/volunteer-1.png" alt="Volunteers" class="w-full min-h-[160px] object-contain rounded-lg bg-earth-700/10 dark:bg-earth-800/30">
+      <img src="assets/blood-donation.png" alt="Blood donation" class="w-full min-h-[160px] object-contain rounded-lg bg-earth-700/10 dark:bg-earth-800/30">
+    </div>
+  </div>
+</section>
+
+<!-- ================= DONATE ================= -->
+<section id="donate" class="py-16 md:py-24 bg-earth-700 dark:bg-earth-800">
+  <div class="max-w-4xl mx-auto px-4 md:px-6">
+    <h2 class="font-script text-3xl md:text-4xl text-gold text-center mb-2">Be the Hope. Be the Change.</h2>
+    <p class="text-center text-cream mb-8">One Rupee can save One Life.</p>
+    <p class="text-center text-cream font-semibold mb-10">Donate Today. Make a Difference.</p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-cream/10 dark:bg-earth-900/40 rounded-xl p-6">
+        <h3 class="font-semibold text-cream mb-4">Bank Transfer</h3>
+        <p class="text-cream/90 text-sm mb-1"><strong>HDFC Bank</strong></p>
+        <p class="text-cream/90 text-sm">A/C No: 50100864300718</p>
+        <p class="text-cream/90 text-sm">IFSC: HDFC0001445</p>
+        <button onclick="navigator.clipboard.writeText('50100864300718')" class="mt-4 text-gold text-sm hover:underline">Copy A/C Number</button>
+      </div>
+      <div class="bg-cream/10 dark:bg-earth-900/40 rounded-xl p-6 text-center">
+        <h3 class="font-semibold text-cream mb-4">Scan to Donate (UPI)</h3>
+        <img src="assets/upi-qr.png" alt="Scan to Donate via UPI" class="w-40 h-40 mx-auto rounded-lg object-contain bg-white p-1">
+        <p class="text-cream/90 text-sm mt-3">Scan with any UPI app</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOLUNTEER ================= -->
+<section id="volunteer" class="py-16 md:py-24 bg-earth-600/20 dark:bg-earth-800/50">
+  <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+    <h2 class="font-script text-3xl md:text-4xl text-gold-dark dark:text-gold mb-2">Become a Volunteer</h2>
+    <p class="text-lg mb-4">Give your time. Change a life.</p>
+    <p class="mb-8 text-earth-800 dark:text-cream/90">Join the Irya Foundation & become a ray of hope for those in need.</p>
+
+    <a id="volunteerWhatsApp" href="https://wa.me/919021785752?text=Hi%2C%20I'd%20like%20to%20volunteer%20with%20Irya%20Foundation" target="_blank" rel="noopener" class="inline-block bg-gold text-earth-900 px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition min-h-[44px]">
+      Join via WhatsApp
+    </a>
+
+    <div class="mt-8 space-y-2">
+      <p>Contact: <a href="tel:9021785752" class="text-gold-dark dark:text-gold hover:underline font-medium">9021785752</a></p>
+      <p>Email: <a href="mailto:iryafoundation@gmail.com" class="text-gold-dark dark:text-gold hover:underline font-medium">iryafoundation@gmail.com</a></p>
+    </div>
+
+    <img src="assets/volunteer-2.png" alt="Volunteers" class="mt-8 w-full max-w-md mx-auto rounded-xl shadow-lg object-contain">
+  </div>
+</section>
+
+<!-- ================= CONTACT & FOOTER ================= -->
+<section id="contact" class="py-16 md:py-24 bg-earth-800 dark:bg-earth-900">
+  <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+    <h2 class="text-2xl font-bold text-gold mb-6">Join Us</h2>
+    <p class="mb-6 text-cream/90">We welcome collaborations with:</p>
+    <p class="text-cream/80 mb-8">CSR partners · Healthcare organizations · Volunteers and donors · Community leaders</p>
+    <p class="text-cream font-semibold mb-2">Together, we can create hope, healing, and a better tomorrow.</p>
+
+    <div class="mb-8">
+      <a href="https://www.iryafoundation.org" target="_blank" rel="noopener" class="inline-block bg-gold/20 text-gold px-4 py-2 rounded font-medium">www.IRYAFOUNDATION.org</a>
+    </div>
+
+    <p class="text-cream/60 text-sm">#OneRupeeOneLife #SaveOneLife #VolunteerForACause</p>
+    <p class="text-cream/50 text-xs mt-4">© 2026 Irya Foundation · Serving Humanity with Purpose</p>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
